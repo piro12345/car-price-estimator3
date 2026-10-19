@@ -12,18 +12,13 @@ def load_model():
     with MODEL_PATH.open("rb") as f:
         return pickle.load(f)
 
-st.title("🚗 Second-Hand Car Price Estimator")
+st.title("car price estimator")
 st.write(
-    "Estimate a used car's selling price using the Random Forest model saved from Orange Data Mining."
+    "estimate a used car's selling price using the random forest model saved from orange data mining."
 )
-st.caption("Educational capstone demonstration. Prices are estimates, not market quotations.")
+st.caption("")
 
-try:
-    model = load_model()
-except Exception as exc:
-    st.error("The saved Orange model could not be loaded. Check the installation and Orange3 version.")
-    st.exception(exc)
-    st.stop()
+
 
 # IMPORTANT: Supply the original features from Select Columns, not the model's
 # internally transformed/one-hot attributes. Orange can then apply its own
