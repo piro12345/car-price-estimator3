@@ -5,7 +5,7 @@ import streamlit as st
 from Orange.data import Domain, Table, ContinuousVariable, DiscreteVariable
 
 st.set_page_config(page_title="second-hand car price estimator", page_icon="", layout="centered")
-MODEL_PATH = Path(__file__).parent / "random_forest.pkcls"
+MODEL_PATH = Path(__file__).parent / "random_forest2.pkcls"
 
 @st.cache_resource
 def load_model():
