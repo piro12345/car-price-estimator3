@@ -4,7 +4,7 @@ from pathlib import Path
 import streamlit as st
 from Orange.data import Domain, Table, ContinuousVariable, DiscreteVariable
 
-st.set_page_config(page_title="Second-Hand Car Price Estimator", page_icon="🚗", layout="centered")
+st.set_page_config(page_title="second-hand car price estimator", page_icon="", layout="centered")
 MODEL_PATH = Path(__file__).parent / "random_forest.pkcls"
 
 @st.cache_resource
