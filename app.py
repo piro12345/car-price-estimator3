@@ -74,15 +74,8 @@ if submitted:
             st.error("The model returned an invalid prediction. Please check the inputs.")
         else:
             st.success(f"Estimated selling price: ₹{price:.2f} lakh")
-            st.caption("Prediction made by your saved Orange Random Forest model.")
+            st.caption("Prediction made by Orange Random Forest model.")
     except Exception as exc:
         st.error("Prediction still failed. Please send this error so we can check the saved model's transformation.")
         st.exception(exc)
 
-with st.expander("About this capstone"):
-    st.write(
-        "This app loads the saved Random Forest model from Orange Data Mining. "
-        "The input fields match the seven original features in the Orange Select Columns widget: "
-        "Year, Present_Price, Kms_Driven, Fuel_Type, Seller_Type, Transmission and Owner. "
-        "Selling_Price is the target and Car_Name is metadata."
-    )
