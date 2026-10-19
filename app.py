@@ -46,15 +46,15 @@ st.subheader("Enter car details")
 with st.form("car_inputs"):
     left, right = st.columns(2)
     with left:
-        year = st.number_input("Manufacturing year", min_value=1990, max_value=2035, value=2017, step=1)
-        present_price = st.number_input("Present price (₹ lakhs)", min_value=0.1, max_value=500.0, value=8.0, step=0.1)
-        kms_driven = st.number_input("Kilometres driven", min_value=0, max_value=1_000_000, value=30000, step=1000)
-        owner = st.selectbox("Previous owners", options=[0, 1, 2, 3])
+        year = st.number_input("year of purchase", min_value=1990, max_value=2035, value=2017, step=1)
+        present_price = st.number_input("current price (₹ lakhs)", min_value=0.1, max_value=500.0, value=8.0, step=0.1)
+        kms_driven = st.number_input("kilometres driven", min_value=0, max_value=1_000_000, value=30000, step=1000)
+        owner = st.selectbox("no. of Previous owners", options=[0, 1, 2, 3])
     with right:
-        fuel_type = st.selectbox("Fuel type", options=fuel_values)
-        seller_type = st.selectbox("Seller type", options=seller_values)
-        transmission = st.selectbox("Transmission", options=transmission_values)
-    submitted = st.form_submit_button("Predict selling price", type="primary", use_container_width=True)
+        fuel_type = st.selectbox("fuel type", options=fuel_values)
+        seller_type = st.selectbox("seller type", options=seller_values)
+        transmission = st.selectbox("transmission", options=transmission_values)
+    submitted = st.form_submit_button("predict selling price", type="primary", use_container_width=True)
 
 if submitted:
     try:
